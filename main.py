@@ -22,6 +22,7 @@ def record_audio():
 
 def translate(voice_data):
     translated_text = pig_latin(voice_data)
+    print(translated_text)
     speak(translated_text)
 
 def speak(audio_string):
@@ -33,7 +34,9 @@ def speak(audio_string):
     os.remove(audio_file)
 
 time.sleep(1)
+print("Enter English text to translate to pig latin")
 speak("Enter English text to translate to pig latin")
 while True:
     voice_data = record_audio()
+    print(voice_data)
     translate(voice_data)
