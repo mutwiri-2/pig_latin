@@ -14,6 +14,10 @@ def record_audio():
             print("Sorry, my services are currently down")
         return voice_data
 
+def translate(voice_data):
+    pig_latin(voice_data)
+
 print("Enter English text to translate to pig latin")
 voice_data = record_audio()
 print(voice_data)
+translate(voice_data)
