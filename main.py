@@ -1,3 +1,4 @@
+import time
 import speech_recognition as sr
 from pig_latin import pig_latin
 
@@ -19,7 +20,9 @@ def translate(voice_data):
     translated_text = pig_latin(voice_data)
     print(translated_text)
 
+time.sleep(1)
 print("Enter English text to translate to pig latin")
-voice_data = record_audio()
-print(voice_data)
-translate(voice_data)
+while True:
+    voice_data = record_audio()
+    print(voice_data)
+    translate(voice_data)
