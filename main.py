@@ -1,4 +1,5 @@
 import speech_recognition as sr
+from pig_latin import pig_latin
 
 recognizer = sr.Recognizer()
 
@@ -15,7 +16,8 @@ def record_audio():
         return voice_data
 
 def translate(voice_data):
-    pig_latin(voice_data)
+    translated_text = pig_latin(voice_data)
+    print(translated_text)
 
 print("Enter English text to translate to pig latin")
 voice_data = record_audio()
